@@ -11,6 +11,64 @@ $(document).ready(function() {
             prevImg();
         }
     })
+
+    var firstDot = $('.fa-circle:nth-of-type(1)');
+    var secondDot = $('.fa-circle:nth-of-type(2)');
+    var thirdDot = $('.fa-circle:nth-of-type(3)');
+    var fourthDot = $('.fa-circle:nth-of-type(4)');
+
+    var firstImg = $('.images img:nth-of-type(1)');
+    var secondImg = $('.images img:nth-of-type(2)');
+    var thirdImg = $('.images img:nth-of-type(3)');
+    var fourthImg = $('.images img:nth-of-type(4)');
+
+    firstDot.click(function(){
+        firstDot.addClass('active');
+        secondDot.removeClass('active');
+        thirdDot.removeClass('active');
+        fourthDot.removeClass('active');
+
+        firstImg.addClass('active');
+        secondImg.removeClass('active');
+        thirdImg.removeClass('active');
+        fourthImg.removeClass('active');
+    });
+
+    secondDot.click(function(){
+        secondDot.addClass('active');
+        firstDot.removeClass('active');
+        thirdDot.removeClass('active');
+        fourthDot.removeClass('active');
+
+        secondImg.addClass('active');
+        firstImg.removeClass('active');
+        thirdImg.removeClass('active');
+        fourthImg.removeClass('active');
+    });
+
+    thirdDot.click(function(){
+        thirdDot.addClass('active');
+        secondDot.removeClass('active');
+        firstDot.removeClass('active');
+        fourthDot.removeClass('active');
+
+        thirdImg.addClass('active');
+        secondImg.removeClass('active');
+        firstImg.removeClass('active');
+        fourthImg.removeClass('active');
+    });
+    
+    fourthDot.click(function(){
+        fourthDot.addClass('active');
+        secondDot.removeClass('active');
+        thirdDot.removeClass('active');
+        firstDot.removeClass('active');
+
+        fourthImg.addClass('active');
+        secondImg.removeClass('active');
+        thirdImg.removeClass('active');
+        firstImg.removeClass('active');
+    });
 });
 
 
