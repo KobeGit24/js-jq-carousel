@@ -17,7 +17,14 @@ $(document).ready(function() {
         dot.removeClass('active');
         $(this).addClass('active');
         $('.images img').removeClass('active');
-        $($('.images img').get($('.nav i.active').index())).addClass('active');
+        $($('.images img').get($('.nav i.active').index())).addClass('active'); // get restituisce un tag, ecco il perche' dell'aggiunta di un altro $ per trasformare l'intera operazione in oggetto jQuery
+
+        // metodo alternativo!
+        // $('img').eq(thisIndex).addClass('active'); eq restituisce un oggetto jQuery!
+        // var thisIndex = $(this).index();
+        
+        // altra selezione!
+        // var img = $('img:nth-of-type('+(thisIndex +1) + ')');
     })
 });
 
